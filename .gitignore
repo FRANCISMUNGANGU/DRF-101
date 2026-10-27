@@ -1,0 +1,6 @@
+.env
+db.sqlite3
+Inventory/migrations/__pycache__/
+Inventory/migrations/*.pyc
+Inventory/__pycache__/
+Bookstore/__pycache__/
