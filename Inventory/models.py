@@ -18,6 +18,10 @@ class Order(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     quantity = models.IntegerField()
     order_date = models.DateTimeField(auto_now_add=True)
+    return_date = models.DateTimeField()
+    total_price = models.DecimalField(max_digits=10, decimal_places=2)
+    is_returned = models.BooleanField(default=False)
+    rate = models.DecimalField(max_digits=3, decimal_places=2)  # New field for rating
 
     def __str__(self):
         return f"Order of {self.quantity} copies of {self.book.title}"
